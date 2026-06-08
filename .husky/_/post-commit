@@ -1,3 +1,7 @@
 #!/usr/bin/env sh
+if ! command -v entire >/dev/null 2>&1; then
+  echo "entire not found; skipping Entire post-commit hook" >&2
+  exit 0
+fi
 entire hooks git post-commit
 
