@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+if ! command -v entire >/dev/null 2>&1; then
+  echo "entire not found; skipping Entire pre-push hook" >&2
+  exit 0
+fi
+entire hooks git pre-push "$1"
+
