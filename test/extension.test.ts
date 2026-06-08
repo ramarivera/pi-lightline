@@ -52,7 +52,7 @@ test("factory exposes the extension identity", async () => {
 
   const created = createExtension();
   assert.equal(created.name, "lightline");
-  assert.equal(extension.name, created.name);
+  assert.equal(typeof extension, "function");
   assert.deepEqual(await created.activate(), extensionInfo);
 });
 

@@ -18,7 +18,7 @@ type CommandContext = {
   };
 };
 
-type PiApi = {
+export type PiApi = {
   on?: (
     event: string,
     handler: (event: unknown, ctx: CommandContext) => void | Promise<void>,

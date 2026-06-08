@@ -1,3 +1,4 @@
+import type { PiApi } from "./extension.ts";
 import { createExtension } from "./extension.ts";
 
 export {
@@ -7,4 +8,6 @@ export {
   readShellHistory,
 } from "./extension.ts";
 
-export default createExtension();
+export default async function lightline(pi: PiApi) {
+  await createExtension().activate(pi);
+}

@@ -21,7 +21,7 @@ test("e2e fixture imports the live local .pi extension shim", async () => {
   assert.deepEqual(settings.extensions, [
     "../../.pi/extensions/lightline/index.ts",
   ]);
-  assert.equal(extension.name, "lightline");
+  assert.equal(typeof extension, "function");
   assert.equal(
     extensionInfo.description,
     "Lightweight Pi statusline and working-message extension",
